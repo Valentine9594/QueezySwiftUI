@@ -17,13 +17,26 @@ struct SignInView: View {
             //MARK: For Social Media SignIn Buttons
             VStack(alignment: .center, spacing: 20) {
                 VStack(alignment: .center, spacing: 20) {
-                    AppSignInButtonView(text: "Sign in with Google", foregroundColor: .black, backgroundColor: .white) {
+                    Button(action: {
                         print("google")
-                    }
+                    }, label: {
+                        HStack(alignment: .center, spacing: 10) {
+                            Image(systemName: "circle")
+                            Text("Sign in with Google")
+                        }
+                    })
+                    .buttonStyle(AppButtonStyle(backgroundColor: .gray.opacity(0.2), foregroundColor: .black))
                     
-                    AppSignInButtonView(text: "Sign in with Facebook", foregroundColor: .white, backgroundColor: .blue) {
-                        print("google")
-                    }
+                    Button(action: {
+                        print("facebook")
+                    }, label: {
+                        HStack(alignment: .center, spacing: 10) {
+                            Image(systemName: "circle")
+                            Text("Sign in with Facebook")
+                        }
+                    })
+                    .buttonStyle(AppButtonStyle(backgroundColor: .blue, foregroundColor: .white))
+                    
                 }
                 
                 //MARK: For Divider with OR

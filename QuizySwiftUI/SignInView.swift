@@ -9,10 +9,12 @@ import SwiftUI
 
 struct SignInView: View {
     @Environment(\.dismiss) var dismiss
+    @State var email: String = ""
+    @State var password: String = ""
     
     var body: some View {
         ZStack(alignment: .top) {
-            Color.gray.opacity(0.2)
+            Color.red.opacity(0.1)
             
             //MARK: For Social Media SignIn Buttons
             VStack(alignment: .center, spacing: 20) {
@@ -25,7 +27,7 @@ struct SignInView: View {
                             Text("Sign in with Google")
                         }
                     })
-                    .buttonStyle(AppButtonStyle(backgroundColor: .gray.opacity(0.2), foregroundColor: .black))
+                    .buttonStyle(AppButtonStyle(backgroundColor: .gray.opacity(0.3), foregroundColor: .black))
                     
                     Button(action: {
                         print("facebook")
@@ -53,9 +55,30 @@ struct SignInView: View {
                     }
                 }
                 
+                VStack(alignment: .center, spacing: 20) {
+                    
+                    AppTextfieldView(name: "email", placeholder: "your email address", text: $email)
+                    
+                    AppTextfieldView(name: "password", placeholder: "your password", text: $password)
+                    
+                    Button("LOGIN", action: {
+                        print("LOGIN")
+                    })
+                    .buttonStyle(AppButtonStyle(backgroundColor: .indigo, foregroundColor: .white))
+                    
+                    Button("Forgot Password?", action: {
+                        print("forgot password")
+                    })
+                    .buttonStyle(AppButtonStyle(backgroundColor: .clear, foregroundColor: .indigo))
+                    
+                    Text(self.getTermsAndConditionsString())
+                        .multilineTextAlignment(.center)
+            
+                }
+                
                 
             }
-            .padding(15)
+            .padding(20)
  
         }
         .navigationBarBackButtonHidden(true)
@@ -70,6 +93,34 @@ struct SignInView: View {
             
         }
 
+    }
+    
+    private func getTermsAndConditionsString() -> AttributedString {
+        let initialString = "By continuing, you agree to the "
+        let terms = "Terms of Services"
+        let and = " & "
+        let privacy = "Privacy Policy"
+        
+        let normalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: Color.gray.opacity(0.5)]
+        let highlightedAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: Color.black]
+        
+        var attributedInitialString = AttributedString(stringLiteral: initialString)
+        attributedInitialString.setAttributes(AttributeContainer(normalAttributes))
+        
+        var attributedTerms = AttributedString(stringLiteral: terms)
+        attributedTerms.setAttributes(AttributeContainer(highlightedAttributes))
+        
+        var attributedAnd = AttributedString(stringLiteral: and)
+        attributedAnd.setAttributes(AttributeContainer(normalAttributes))
+        
+        var attributedPrivacy = AttributedString(stringLiteral: privacy)
+        attributedPrivacy.setAttributes(AttributeContainer(highlightedAttributes))
+
+        attributedAnd.append(attributedPrivacy)
+        attributedTerms.append(attributedAnd)
+        attributedInitialString.append(attributedTerms)
+        
+        return attributedInitialString
     }
 }
 

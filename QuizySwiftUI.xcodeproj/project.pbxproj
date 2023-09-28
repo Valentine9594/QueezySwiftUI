@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5094624D2AC54DC100D2E06A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5094624C2AC54DC100D2E06A /* SignInView.swift */; };
 		5094624F2AC55D4C00D2E06A /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5094624E2AC55D4C00D2E06A /* LoginModel.swift */; };
+		509462532AC5B20F00D2E06A /* AppTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509462522AC5B20F00D2E06A /* AppTextfieldView.swift */; };
 		509AB2992AC410C400FAAE93 /* QuizySwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509AB2982AC410C400FAAE93 /* QuizySwiftUIApp.swift */; };
 		509AB29B2AC410C400FAAE93 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509AB29A2AC410C400FAAE93 /* LoginView.swift */; };
 		509AB29D2AC410C500FAAE93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509AB29C2AC410C500FAAE93 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		5094624C2AC54DC100D2E06A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5094624E2AC55D4C00D2E06A /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		509462522AC5B20F00D2E06A /* AppTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextfieldView.swift; sourceTree = "<group>"; };
 		509AB2952AC410C400FAAE93 /* QuizySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509AB2982AC410C400FAAE93 /* QuizySwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizySwiftUIApp.swift; sourceTree = "<group>"; };
 		509AB29A2AC410C400FAAE93 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				509AB29E2AC410C500FAAE93 /* Preview Content */,
 				5094624C2AC54DC100D2E06A /* SignInView.swift */,
 				5094624E2AC55D4C00D2E06A /* LoginModel.swift */,
+				509462522AC5B20F00D2E06A /* AppTextfieldView.swift */,
 			);
 			path = QuizySwiftUI;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				509AB2AA2AC455F900FAAE93 /* AppButtonStyle.swift in Sources */,
 				509AB29B2AC410C400FAAE93 /* LoginView.swift in Sources */,
 				5094624D2AC54DC100D2E06A /* SignInView.swift in Sources */,
+				509462532AC5B20F00D2E06A /* AppTextfieldView.swift in Sources */,
 				509AB2992AC410C400FAAE93 /* QuizySwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

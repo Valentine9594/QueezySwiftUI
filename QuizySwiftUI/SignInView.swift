@@ -11,10 +11,10 @@ struct SignInView: View {
     @Environment(\.dismiss) var dismiss
     @State var email: String = ""
     @State var password: String = ""
-    
+     
     var body: some View {
         ZStack(alignment: .top) {
-            Color.red.opacity(0.1)
+            Color.purple.opacity(0.2)
             
             GeometryReader { gemotry in
                 
@@ -33,7 +33,7 @@ struct SignInView: View {
                                         Text("Sign in with Google")
                                     }
                                 })
-                                .buttonStyle(AppButtonStyle(backgroundColor: .gray.opacity(0.3), foregroundColor: .black))
+                                .buttonStyle(AppButtonStyle(backgroundColor: .red.opacity(0.8), foregroundColor: .white))
                                 
                                 Button(action: {
                                     print("facebook")
@@ -43,7 +43,7 @@ struct SignInView: View {
                                         Text("Sign in with Facebook")
                                     }
                                 })
-                                .buttonStyle(AppButtonStyle(backgroundColor: .blue, foregroundColor: .white))
+                                .buttonStyle(AppButtonStyle(backgroundColor: .blue.opacity(0.8), foregroundColor: .white))
                                 
                             }
                             .frame(height: 120)
@@ -70,7 +70,7 @@ struct SignInView: View {
                                         print(newValue)
                                     }
                                 
-                                AppTextfieldView(name: "password", placeholder: "your password", text: $password)
+                                AppSecurefieldView(name: "password", placeholder: "your password", text: $password)
                                 
                                 Button("LOGIN", action: {
                                     print("LOGIN")
@@ -105,10 +105,7 @@ struct SignInView: View {
                         
                     }
                     .frame(height: gemotry.size.height, alignment: .top)
-                    .safeAreaInset(edge: .bottom, alignment: .center, spacing: 200) {
-                        Spacer()
-                    }
-                    
+                    .keyboardAdaptive()
                 }
                 
             }

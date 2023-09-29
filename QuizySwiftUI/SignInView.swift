@@ -16,7 +16,7 @@ struct SignInView: View {
         ZStack(alignment: .top) {
             Color.purple.opacity(0.2)
             
-            GeometryReader { gemotry in
+//            GeometryReader { gemotry in
                 
                 ScrollView(.vertical, showsIndicators: true) {
                     
@@ -104,9 +104,9 @@ struct SignInView: View {
                         }
                         
                     }
-                    .frame(height: gemotry.size.height, alignment: .top)
+                    .frame(height: UIScreen.main.bounds.height * 0.85, alignment: .top)
                     .keyboardAdaptive()
-                }
+//                }
                 
             }
             

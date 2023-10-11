@@ -11,6 +11,7 @@ struct SignInView: View {
     @Environment(\.dismiss) var dismiss
     @State var email: String = ""
     @State var password: String = ""
+    @State var navigateHome: Bool = false
      
     var body: some View {
         ZStack(alignment: .top) {
@@ -74,8 +75,12 @@ struct SignInView: View {
                                 
                                 Button("LOGIN", action: {
                                     print("LOGIN")
+                                    self.navigateHome = true
                                 })
                                 .buttonStyle(AppButtonStyle(backgroundColor: .indigo, foregroundColor: .white))
+                                .navigationDestination(isPresented: $navigateHome) {
+                                    HomeView()
+                                }
                                 
                                 Button("Forgot Password?", action: {
                                     print("forgot password")

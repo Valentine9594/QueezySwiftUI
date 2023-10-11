@@ -4,10 +4,10 @@
 <dict>
 	<key>UILaunchScreen</key>
 	<dict>
-		<key>UIImageName</key>
-		<string>SplashScreen</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<false/>
+		<key>UIImageName</key>
+		<string>SplashScreen</string>
 	</dict>
 </dict>
 </plist>

@@ -15,7 +15,10 @@
 		509AB29D2AC410C500FAAE93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509AB29C2AC410C500FAAE93 /* Assets.xcassets */; };
 		509AB2A02AC410C500FAAE93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509AB29F2AC410C500FAAE93 /* Preview Assets.xcassets */; };
 		509AB2AA2AC455F900FAAE93 /* AppButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509AB2A92AC455F900FAAE93 /* AppButtonStyle.swift */; };
+		50B989342AD67684005E13A7 /* AppTabbarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B989332AD67684005E13A7 /* AppTabbarShape.swift */; };
+		50B989372AD67724005E13A7 /* AppTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B989362AD67724005E13A7 /* AppTabbarView.swift */; };
 		50DB00EF2AC6BA5200799F3D /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB00EE2AC6BA5200799F3D /* KeyboardManager.swift */; };
+		50DB00F12AC6F5DA00799F3D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB00F02AC6F5DA00799F3D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		509AB29F2AC410C500FAAE93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		509AB2A82AC411FF00FAAE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		509AB2A92AC455F900FAAE93 /* AppButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtonStyle.swift; sourceTree = "<group>"; };
+		50B989332AD67684005E13A7 /* AppTabbarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbarShape.swift; sourceTree = "<group>"; };
+		50B989362AD67724005E13A7 /* AppTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbarView.swift; sourceTree = "<group>"; };
 		50DB00EE2AC6BA5200799F3D /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		50DB00F02AC6F5DA00799F3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +68,15 @@
 		509AB2972AC410C400FAAE93 /* QuizySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				50B989352AD676A5005E13A7 /* CommonViews */,
 				509AB2A82AC411FF00FAAE93 /* Info.plist */,
 				509AB2982AC410C400FAAE93 /* QuizySwiftUIApp.swift */,
 				509AB29A2AC410C400FAAE93 /* LoginView.swift */,
-				509AB2A92AC455F900FAAE93 /* AppButtonStyle.swift */,
 				509AB29C2AC410C500FAAE93 /* Assets.xcassets */,
 				509AB29E2AC410C500FAAE93 /* Preview Content */,
 				5094624C2AC54DC100D2E06A /* SignInView.swift */,
 				5094624E2AC55D4C00D2E06A /* LoginModel.swift */,
-				509462522AC5B20F00D2E06A /* AppTextfieldView.swift */,
-				50DB00EE2AC6BA5200799F3D /* KeyboardManager.swift */,
+				50DB00F02AC6F5DA00799F3D /* HomeView.swift */,
 			);
 			path = QuizySwiftUI;
 			sourceTree = "<group>";
@@ -82,6 +87,18 @@
 				509AB29F2AC410C500FAAE93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		50B989352AD676A5005E13A7 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				50DB00EE2AC6BA5200799F3D /* KeyboardManager.swift */,
+				50B989362AD67724005E13A7 /* AppTabbarView.swift */,
+				509462522AC5B20F00D2E06A /* AppTextfieldView.swift */,
+				50B989332AD67684005E13A7 /* AppTabbarShape.swift */,
+				509AB2A92AC455F900FAAE93 /* AppButtonStyle.swift */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,11 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5094624F2AC55D4C00D2E06A /* LoginModel.swift in Sources */,
+				50B989342AD67684005E13A7 /* AppTabbarShape.swift in Sources */,
 				509AB2AA2AC455F900FAAE93 /* AppButtonStyle.swift in Sources */,
 				509AB29B2AC410C400FAAE93 /* LoginView.swift in Sources */,
 				5094624D2AC54DC100D2E06A /* SignInView.swift in Sources */,
 				509462532AC5B20F00D2E06A /* AppTextfieldView.swift in Sources */,
+				50DB00F12AC6F5DA00799F3D /* HomeView.swift in Sources */,
 				50DB00EF2AC6BA5200799F3D /* KeyboardManager.swift in Sources */,
+				50B989372AD67724005E13A7 /* AppTabbarView.swift in Sources */,
 				509AB2992AC410C400FAAE93 /* QuizySwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuizySwiftUI/Preview Content\"";
@@ -315,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuizySwiftUI/Preview Content\"";
